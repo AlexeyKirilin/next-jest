@@ -1,15 +1,15 @@
-import { PunsData } from 'store/reducers/ContentStore/types';
+import { BunsData } from 'store/reducers/ContentStore/types';
 
 import { api } from './utils';
 
-type PunsDataResult = {
-  data: PunsData[];
+type BunsDataResult = {
+  data: BunsData[];
 };
 
-const getAllPuns = async () => {
-  const { data } = await api.get<PunsDataResult>('/puns');
+const getAllBuns = async () => {
+  const { data } = await api.get<BunsDataResult>('/buns');
 
   return data;
 };
 
-export { getAllPuns };
+export { getAllBuns };

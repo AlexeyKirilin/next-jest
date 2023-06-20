@@ -4,11 +4,16 @@ import styles from './styles.module.scss';
 import MenuList from './components/MenuList';
 import MenuCategory from './components/MenuCategory';
 
-const Menu: React.FC = () => {
+const Menu: React.FC = ({ breadData, cakesData, piesData, bunsData }) => {
   return (
     <div className={styles.menu}>
       <MenuCategory />
-      <MenuList />
+      <MenuList
+        breadData={breadData}
+        cakesData={cakesData}
+        piesData={piesData}
+        bunsData={bunsData}
+      />
     </div>
   );
 };
