@@ -1,0 +1,57 @@
+.footer {
+    background-color: #555555;
+}
+
+.footerWrapper {
+    display: flex;
+}
+
+.footerText {
+    font-size: 60px;
+    text-transform: uppercase;
+    width: 500px;
+    align-items: center;
+    border-right: 1px solid #494949;
+    text-align: center;
+    padding: 23px 0;
+}
+
+.footerItems {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footerItemsWrapper {
+    width: 100% ;
+}
+
+.footerItem {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 100px;
+    border-bottom: 1px solid #494949;
+}
+
+.footerName {
+    font-size: 34px;
+}
+
+.footerPrice {
+    font-size: 28px;
+    align-self: center;
+}
+
+.footerButtonSend {
+    cursor: pointer;
+    padding: 10px 30px;
+    align-items: center;
+    background-color: #e72121;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 25px;
+    border: none;
+}
+

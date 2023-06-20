@@ -1,0 +1,140 @@
+{
+  "bread": [
+    {
+      "id": 1,
+      "imageUrl": "https://1xleb.ru/upload/iblock/76d/76d3430ebab72a69008669c2b08e61c7.JPG",
+      "title": "Хлеб пшеничный",
+      "price": 36,
+      "total": 4,
+      "category": "хлеб",
+      "descr": "Хлеб пшеничный. Состав: мука, вода, соль, сахар.."
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://dom-eda.com/uploads/images/catalog/item/f770ee4d85/04bc634f39_500.jpg",
+      "title": "Хлеб бородинский",
+      "price": 42,
+      "total": 2,
+      "category": "хлеб",
+      "descr": "Хлеб бородинский. Состав: мука, вода, соль, сахар.."
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://1hleb.ru/upload/iblock/6e2/6e215e3e8d935b89f94a8e4f78d14273.jpg",
+      "title": "Хлеб нарезной",
+      "price": 48,
+      "total": 1,
+      "category": "хлеб",
+      "descr": "Хлеб нарезной. Состав: мука, вода, соль, сахар.."
+    }
+  ],
+  "pies": [
+    {
+      "id": 1,
+      "imageUrl": "https://www.gastronom.ru/binfiles/images/20221128/be436507.jpg",
+      "title": "Пирог с капустой",
+      "price": 60,
+      "total": 6,
+      "category": "пироги",
+      "descr": "Пирог с капустой. Состав: мука, вода, капуста, соль, сахар.."
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://img1.russianfood.com/dycontent/images_upl/551/big_550139.jpg",
+      "title": "Пирог с картошкой",
+      "price": 55,
+      "total": 5,
+      "category": "пироги",
+      "descr": "Пирог с картошкой. Состав: мука, вода, картошка, соль, сахар.."
+    }
+  ],
+  "puns": [
+    {
+      "id": 1,
+      "imageUrl": "https://british-bakery.ru/upload/iblock/0ad/0add711ccc5a2523929b5c1e26f6a49a.jpg",
+      "title": "Булочка с маком",
+      "price": 38,
+      "total": 0,
+      "category": "булочки",
+      "descr": "Булочка с маком. Состав: мука, вода, капуста, соль, сахар.."
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://hlebman.ru/wp-content/uploads/2018/04/Bulochka_s_koricej_0-e1527408012582.jpg",
+      "title": "Булочка с корицей",
+      "price": 30,
+      "total": 3,
+      "category": "булочки",
+      "descr": "Булочка с корицей. Состав: мука, вода, капуста, соль, сахар.."
+    }
+  ],
+  "cakes": [
+    {
+      "id": 1,
+      "imageUrl": "https://british-bakery.ru/upload/iblock/0ad/0add711ccc5a2523929b5c1e26f6a49a.jpg",
+      "title": "Торт шоколадный",
+      "price": 420,
+      "total": 2,
+      "category": "Торты",
+      "descr": "Торт шоколадный. Состав: мука, вода, шоколад, соль, сахар.."
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://hlebman.ru/wp-content/uploads/2018/04/Bulochka_s_koricej_0-e1527408012582.jpg",
+      "title": "Торт с кремом",
+      "price": 380,
+      "total": 1,
+      "category": "Торты",
+      "descr": "Торт с кремом. Состав: мука, вода, крем, соль, сахар.."
+    }
+  ],
+  "pizza": [
+    {
+      "id": 1,
+      "imageUrl": "https://british-bakery.ru/upload/iblock/0ad/0add711ccc5a2523929b5c1e26f6a49a.jpg",
+      "title": "Пицца с грибами",
+      "price": 400,
+      "total": 4,
+      "category": "Пиццы",
+      "descr": "Пицца с грибами. Состав: мука, вода, грибы, соль, сахар.."
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://hlebman.ru/wp-content/uploads/2018/04/Bulochka_s_koricej_0-e1527408012582.jpg",
+      "title": "Пицца с ананасами",
+      "price": 510,
+      "total": 2,
+      "category": "Пиццы",
+      "descr": "Пицца с ананасами. Состав: мука, вода, ананасы, соль, сахар.."
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://hlebman.ru/wp-content/uploads/2018/04/Bulochka_s_koricej_0-e1527408012582.jpg",
+      "title": "Пицца с мясом",
+      "price": 560,
+      "total": 0,
+      "category": "Пиццы",
+      "descr": "Пицца с мясом. Состав: мука, вода, мясо, соль, сахар.."
+    }
+  ],
+  "desert": [
+    {
+      "id": 1,
+      "imageUrl": "https://british-bakery.ru/upload/iblock/0ad/0add711ccc5a2523929b5c1e26f6a49a.jpg",
+      "title": "Пирожное с кремом",
+      "price": 120,
+      "total": 2,
+      "category": "Пирожные",
+      "descr": "Пирожное с кремом. Состав: мука, вода, крем, соль, сахар.."
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://hlebman.ru/wp-content/uploads/2018/04/Bulochka_s_koricej_0-e1527408012582.jpg",
+      "title": "Пирожное со сгущенкой",
+      "price": 90,
+      "total": 7,
+      "category": "Пирожные",
+      "descr": "Пирожное со сгущенкой. Состав: мука, вода, сгущенка, соль, сахар.."
+    }
+  ]
+}
