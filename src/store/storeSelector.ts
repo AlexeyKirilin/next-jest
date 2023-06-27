@@ -2,4 +2,4 @@ import { State } from "./types";
 
 const storeSelector = (state: State) => state;
 
-export { storeSelector };
+export default storeSelector;

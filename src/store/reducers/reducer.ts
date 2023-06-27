@@ -5,14 +5,18 @@ import {
   fetchAllBread,
   fetchAllCakes,
   fetchAllPies,
-  fetchAllPuns
+  fetchAllBuns,
+  getTotal
 } from './actions';
 
-import { ContentStateBlocks, BreadData, CakesData, PiesData, PunsData, ContentState } from './types';
+import { handlePendingStore, handleFulfilledStore, handleRejectedStore } from 'helpers/store';
+
+import { ContentStateBlocks, BreadData, CakesData, PiesData, BunsData, ContentState } from './types';
+
 import { State } from 'store/types';
 
 const initialState: ContentState = {
-    braed: {
+    bread: {
         data: [],
         error: null,
         isLoading: false
@@ -27,10 +31,15 @@ const initialState: ContentState = {
         error: null,
         isLoading: false
     },
-    puns: {
+    buns: {
         data: [],
         error: null,
         isLoading: false
+    },
+    total: {
+      data: [],
+      error: null,
+      isLoading: false
     }
 };
 
@@ -48,6 +57,7 @@ const handlers = {
       const errorData = { name: error.name, message: error.message };
       handleRejectedStore({ state, errorData, name: ContentStateBlocks.BREAD });
     },
+
     [fetchAllCakes.pending.type]: (state: ContentState) => {
       handlePendingStore({ state, name: ContentStateBlocks.CAKES });
     },
@@ -61,6 +71,7 @@ const handlers = {
       const errorData = { name: error.name, message: error.message };
       handleRejectedStore({ state, errorData, name: ContentStateBlocks.CAKES });
     },
+
     [fetchAllPies.pending.type]: (state: ContentState) => {
       handlePendingStore({ state, name: ContentStateBlocks.PIES });
     },
@@ -74,19 +85,26 @@ const handlers = {
       const errorData = { name: error.name, message: error.message };
       handleRejectedStore({ state, errorData, name: ContentStateBlocks.PIES });
     },
-    [fetchAllPuns.pending.type]: (state: ContentState) => {
-      handlePendingStore({ state, name: ContentStateBlocks.PUNS });
+    
+    [fetchAllBuns.pending.type]: (state: ContentState) => {
+      handlePendingStore({ state, name: ContentStateBlocks.BUNS });
     },
-    [fetchAllPuns.fulfilled.type]: (
+    [fetchAllBuns.fulfilled.type]: (
       state: ContentState,
-      { payload }: PayloadAction<PunsData[]>,
+      { payload }: PayloadAction<BunsData[]>,
       ) => {
-        handleFulfilledStore({ state, payload, name: ContentStateBlocks.PUNS });
+        handleFulfilledStore({ state, payload, name: ContentStateBlocks.BUNS });
     },
-    [fetchAllPuns.rejected.type]: (state: ContentState, { error }: ErrorAction) => {
+    [fetchAllBuns.rejected.type]: (state: ContentState, { error }: ErrorAction) => {
       const errorData = { name: error.name, message: error.message };
-      handleRejectedStore({ state, errorData, name: ContentStateBlocks.PUNS });
+      handleRejectedStore({ state, errorData, name: ContentStateBlocks.BUNS });
     },
+    [getTotal.type]: (
+      state: ContentState,
+      { payload }: { payload: number },
+    ) => {
+      state.total = payload;
+      },
     [HYDRATE]: (state: ContentState, action: PayloadAction<State>) => ({
       ...state,
       ...action.payload.contentStore,
@@ -95,4 +113,4 @@ const handlers = {
 
 const reducer = createReducer(initialState, handlers);
 
-export { reducer };
+export default reducer;

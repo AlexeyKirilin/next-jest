@@ -2,7 +2,7 @@ import {
     HandleFulfilled,
     HandlePending,
     HandleRejected,
-  } from 'store/reducers/ContentStore/types';
+  } from 'store/reducers/types';
   
   const handlePendingStore = <S>({ state, name }: HandlePending<S>) => {
     state[name].pending = true;

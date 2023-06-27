@@ -1,11 +1,12 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createAction } from '@reduxjs/toolkit';
 
-import { getAllBread } from "api/getAllBread";
-import { getAllCakes } from 'api/getAllCakes';
-import { getAllPies } from 'api/getAllPies';
-import { getAllPuns } from 'api/getAllPuns';
+import { getAllBread } from "api/routes/getAllBread";
+import { getAllCakes } from 'api/routes/getAllCakes';
+import { getAllPies } from 'api/routes/getAllPies';
+import { getAllBuns } from 'api/routes/getAllBuns';
+// import { BreadData } from './types';
 
-const fetchAllBread = createAsyncThunk(
+const fetchAllBread = createAsyncThunk<BreadResponseData>(
     'fetchAllBread',
     async () => {
       const { data } = await getAllBread();
@@ -32,18 +33,21 @@ const fetchAllPies = createAsyncThunk(
     },
 );
 
-const fetchAllPuns = createAsyncThunk(
-    'fetchAllPuns',
+const fetchAllBuns = createAsyncThunk(
+    'fetchAllBuns',
     async () => {
-      const { data } = await getAllPuns();
+      const { data } = await getAllBuns();
   
       return data;
     },
 );
 
+const getTotal = createAction<number>('total');
+
 export {
   fetchAllBread,
   fetchAllCakes,
   fetchAllPies,
-  fetchAllPuns
+  fetchAllBuns,
+  getTotal
 }

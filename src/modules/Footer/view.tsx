@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-const Footer = () => {
+const Footer = ({ data }) => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerWrapper}>

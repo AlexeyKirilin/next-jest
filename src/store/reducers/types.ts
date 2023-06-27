@@ -17,6 +17,16 @@ type HandleRejected<S, E> = {
 
 type BreadData = {
   id: number,
+  title: string,
+  imageUrl: string,
+  price: number
+  total: number,
+  category: string,
+  descr: string;
+}
+
+type CakesData = {
+  id: number,
   imageUrl: string,
   title: string,
   price: number
@@ -25,89 +35,101 @@ type BreadData = {
   descr: string
 }
 
-type CakesData = {
-    id: number,
-    imageUrl: string,
-    title: string,
-    price: number
-    total: number,
-    category: string,
-    descr: string
-}
-
 type PiesData = {
-    id: number,
-    imageUrl: string,
-    title: string,
-    price: number
-    total: number,
-    category: string,
-    descr: string
+  id: number,
+  imageUrl: string,
+  title: string,
+  price: number
+  total: number,
+  category: string,
+  descr: string
 }
 
-type PunsData = {
-    id: number,
-    imageUrl: string,
-    title: string,
-    price: number
-    total: number,
-    category: string,
-    descr: string
+type BunsData = {
+  id: number,
+  imageUrl: string,
+  title: string,
+  price: number
+  total: number,
+  category: string,
+  descr: string
+}
+
+type TotalData = {
+  title: string,
+  price: number,
+  id: number
+}
+
+enum ContentStateBlocks {
+  BREAD = 'bread',
+  CAKES = 'cakes',
+  BUNS = 'buns',
+  PIES = 'pies',
+  TOTAL = 'total'
+}
+
+enum CurrentPage  {
+  BREAD = 'bread',
+  CAKES = 'cakes',
+  BUNS = 'buns',
+  PIES = 'pies'
 }
 
 type ContentState = {
-    [ContentStateBlocks.BREAD]: BreadState;
-    [ContentStateBlocks.CAKES]: CakesState;
-    [ContentStateBlocks.PUNS]: PiesState;
-    [ContentStateBlocks.PIES]: PunsState;
+  [ContentStateBlocks.BREAD]: BreadState;
+  [ContentStateBlocks.CAKES]: CakesState;
+  [ContentStateBlocks.PIES]: PiesState;
+  [ContentStateBlocks.BUNS]: Bunstate;
+  [ContentStateBlocks.TOTAL]: TotalState;
 };
   
-enum ContentStateBlocks {
-    BREAD = 'bread',
-    CAKES = 'cakes',
-    PUNS = 'puns',
-    PIES = 'pies'
-}
 
 type StoreError = {
-    name: string;
-    message: string;
+  name: string;
+  message: string;
 };
 
 type StoreState = {
-    isLoading: boolean;
-    error: StoreError | null;
+  isLoading: boolean;
+  error: StoreError | null;
 };
 
 type BreadState = {
-    data: BreadData[] | null;
+    data: BreadData[];
 } & StoreState;
 
 type CakesState = {
-    data: CakesData[] | null;
+    data: CakesData[];
 } & StoreState;
 
 type PiesState = {
-    data: PiesData[] | null;
+    data: PiesData[];
 } & StoreState;
 
-type PunsState = {
-    data: PunsData[] | null;
+type BunsState = {
+    data: BunsData[];
+} & StoreState;
+
+type TotalState = {
+  data: TotalData[];
 } & StoreState;
 
 export type {
   HandlePending, 
   HandleFulfilled, 
   HandleRejected, 
-  BreadData, 
+  BreadData,
   CakesData, 
   PiesData, 
-  PunsData, 
+  BunsData, 
   BreadState,
   CakesState,
   PiesState,
-  PunsState, 
-  ContentState
+  BunsState, 
+  ContentState,
+  TotalState,
+  TotalData
 }
 
-export { ContentStateBlocks }
+export { ContentStateBlocks, CurrentPage }

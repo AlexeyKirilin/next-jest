@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import { wrapper } from 'store';
 
 import 'styles/global.scss';
 
@@ -23,4 +24,5 @@ const App = ({ Component, pageProps }) => (
   </>
 );
 
-export default App;
+export default wrapper.withRedux(App);
+// export default App;

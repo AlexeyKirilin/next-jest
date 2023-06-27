@@ -1,0 +1,57 @@
+.menuList {
+    width: 1200px;
+    margin: 0 auto;
+}
+.menuListTitle {
+    margin: 40px 0;
+}
+.menuListGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.menuListItem {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #555555;
+}
+
+.menuListName {
+    font-size: 24px;
+    text-align: left;
+}
+
+.menuListPrice {
+    font-size: 18px;
+    text-align: left;
+}
+
+.menuListQuantity {
+    text-align: left;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.image {
+    width: 150px;
+    object-fit: cover;
+    height: 150px;
+}
+
+.menuListWrapperPlus {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #f34646;
+    margin-top: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menuListPlus {
+    position: absolute;
+    left: 5px;
+    top: -4px;
+}
