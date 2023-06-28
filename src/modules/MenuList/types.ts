@@ -8,7 +8,7 @@ type StateProps = {
 }
 
 type OuterProps = {
-    data: StateProps[]
+    data: BreadData | CakesData | PiesData | BunsData
 }
 
 export type { OuterProps }

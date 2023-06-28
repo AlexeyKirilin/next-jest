@@ -10,7 +10,6 @@
     "start": "next start",
     "type-check": "tsc",
     "test": "jest",
-    "prepush": "npm test",
     "server": "json-server -w db.json",
     "lint": "eslint . --ext .ts --max-warnings 0",
     "prepare": "husky install"
@@ -18,7 +17,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run prepush"
+      "pre-push": "npm run test"
     }
   },
   "dependencies": {

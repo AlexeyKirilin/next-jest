@@ -7,19 +7,18 @@ type InnerProps = {
   bunsData: BunsData,
 }
 
-// type StateProps<DictionaryItems> = {
-//   dictionaryData: Record<DictionaryItem, InnerProps>;
-//   activePage: DictionaryItems;
-//   setActivePage: (activePage: DictionaryItems) => void;
-//   data: InnerProps;
-// };
-
 type StateProps = {
   dictionaryData: Record<DictionaryItem, InnerProps>;
   activePage: InnerProps;
   setActivePage: (activePage: InnerProps) => void;
   data: InnerProps;
 };
+
+type OuterProps = {}
+
+type ConnectorProps = {}
+type ControllerProps = {}
+type ViewProps = {}
 
 
 export type { StateProps, InnerProps }

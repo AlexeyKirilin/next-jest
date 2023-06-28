@@ -90,14 +90,12 @@ type StoreError = {
   message: string;
 };
 
-type StoreState = {
+type StoreBlock<R> = {
+  data: R[],
   isLoading: boolean;
   error: StoreError | null;
-};
-
-type BreadState = {
-    data: BreadData[];
-} & StoreState;
+}
+type BreadState = StoreBlock<BreadData>
 
 type CakesState = {
     data: CakesData[];

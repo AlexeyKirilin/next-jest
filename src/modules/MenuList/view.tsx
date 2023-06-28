@@ -6,7 +6,7 @@ import { OuterProps } from './types';
 import styles from './styles.module.scss';
 
 const View: React.FC<OuterProps> = ({ data }) => {
-  const { title, total, picture, price } = data;
+  const { title, total, picture, price } = data; // [{breadData: [{}]}, {}]
   return (
     <div className={styles.menuList}>
       <h3 className={styles.menuListTitle}>Menu</h3>

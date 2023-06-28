@@ -3,6 +3,7 @@ type RequestData = {
     method: string;
 }
 
+// не используется
 type ResponseData = {
     url: string,
     method: string;

@@ -13,4 +13,4 @@ type CakesResponseData = {
     data: CakesData
 }
 
-export type { CakesResponseData }
+export type { CakesResponseData, CakesData }

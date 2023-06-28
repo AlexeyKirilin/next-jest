@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+// добавить линтер на проверку не используемых импортов
 import { RequestData, ResponseData } from './types';
 
 const api = () =>
@@ -9,9 +9,10 @@ const api = () =>
       'content-type': 'application/json',
   },
 });
+// Разобраться что за тип async <ResponseData> = https://www.typescriptlang.org/docs/handbook/2/generics.html
 
-const sendRequest = async <ResponseData>({url, method}: RequestData): ResponseData => {
-  return await api()
+const sendRequest = async <R>({url, method}: RequestData): Promise<R> => {
+  return api()
     .request({
       method,
       url

@@ -11,14 +11,19 @@ import {
 } from 'store/reducers/actions';
 
 import View from './view';
+import { OuterProps } from 'modules/MenuCategory/types';
 
-type Props = StateProps;
+type Props = StateProps 
+type TA = {
+  a: number,
+  b: string,
+}
 
+type test = Pick<TA, 'a' | 'b'> // type test = {a: number, b: string}
+type test1 = Omit<TA, 'a'> // type test = { b: string}
 const Controller: React.FC<Props> = ({ data, setActivePage, activePage }) => {
-  const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchAllBread());
+    fetchAllBreadsProducts();
     // dispatch(fetchAllCakes());
     // dispatch(fetchAllPies());
     // dispatch(fetchAllBuns());

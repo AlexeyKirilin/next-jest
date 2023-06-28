@@ -15,12 +15,12 @@ import { ContentStateBlocks, BreadData, CakesData, PiesData, BunsData, ContentSt
 
 import { State } from 'store/types';
 
+const getInitialStateBlock = () => ({
+  data: [], error: null, isLoading: false
+})
+
 const initialState: ContentState = {
-    bread: {
-      data: [],
-      error: null,
-      isLoading: false
-    },
+    bread: getInitialStateBlock(),
     cakes: {
       data: [],
       error: null,
@@ -103,7 +103,7 @@ const handlers = {
       state: ContentState,
       { payload }: { payload: number },
     ) => {
-      state.total = payload;
+        state.total = payload;
       },
     [HYDRATE]: (state: ContentState, action: PayloadAction<State>) => ({
       ...state,
