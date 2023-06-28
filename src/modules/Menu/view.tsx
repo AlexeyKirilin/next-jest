@@ -6,11 +6,22 @@ import { OuterProps } from './types';
 
 import styles from './styles.module.scss';
 
-function View<OuterProps>({ setActivePage, data, activePage }) {
+function View<DictionaryItems>({
+  setActivePage,
+  data,
+  activePage,
+  dictionaryData,
+}: OuterProps<DictionaryItems>) {
+  const dictionaryDataItem = dictionaryData[activePage];
+
   return (
     <div className={styles.menu}>
-      <MenuCategory setActivePage={setActivePage} activePage={activePage} />
-      <MenuList data={data} />
+      <MenuCategory
+        dictionaryData={dictionaryData}
+        setActivePage={setActivePage}
+        activePage={activePage}
+      />
+      <MenuList data={dictionaryDataItem} />
     </div>
   );
 }

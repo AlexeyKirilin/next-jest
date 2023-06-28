@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import Controller from './controller';
 
+import Controller from './controller';
 import { CurrentPage } from 'store/reducers/types';
 
 import {
@@ -34,12 +34,3 @@ const Connector = () => {
 };
 
 export default Connector;
-
-// const selectorsByStepId = {
-//   [StepInputs.BRAND]: selectBrands,
-//   [StepInputs.MODEL]: selectModels,
-//   [StepInputs.YEAR]: selectYears,
-//   [StepInputs.ENGINE]: selectEngines,
-// };
-
-// const { isLoading, data } = useSelector(selectorsByStepId[inputStepId]);

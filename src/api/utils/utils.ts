@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { RequestData } from './types';
+import { RequestData, ResponseData } from './types';
 
 const api = () =>
   axios.create({

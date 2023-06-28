@@ -1,3 +1,5 @@
+@import "~styles/colors";
+
 .menuList {
     width: 1200px;
     margin: 0 auto;
@@ -14,7 +16,7 @@
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    background-color: #555555;
+    background-color: $gray1;
 }
 
 .menuListName {
@@ -44,7 +46,7 @@
     height: 30px;
     position: relative;
     border-radius: 50%;
-    background-color: #f34646;
+    background-color: $red2;
     margin-top: 15px;
     cursor: pointer;
     display: inline-block;

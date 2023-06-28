@@ -1,23 +1,25 @@
 import { BreadData, BunsData, CakesData, PiesData } from "store/reducers/types";
 
 type InnerProps = {
-    breadData: BreadData,
-    cakesData: CakesData,
-    piesData: PiesData,
-    bunsData: BunsData,
+  breadData: BreadData,
+  cakesData: CakesData,
+  piesData: PiesData,
+  bunsData: BunsData,
 }
 
-// type OuterProps = {
-//     activePage:() => void;
-//     setActivePage: () => void;
-//     data: InnerProps[],
-//     dictionaryData: Record<DictionaryItem, PortfolioInfoItem>;
-// }
+// type StateProps<DictionaryItems> = {
+//   dictionaryData: Record<DictionaryItem, InnerProps>;
+//   activePage: DictionaryItems;
+//   setActivePage: (activePage: DictionaryItems) => void;
+//   data: InnerProps;
+// };
 
-type OuterProps<DictionaryItems> = {
-    dictionaryData: Record<DictionaryItem, InnerProps>;
-    activePage: DictionaryItems;
-    setActivePage: (activeBlock: DictionaryItems) => void;
-  };
+type StateProps = {
+  dictionaryData: Record<DictionaryItem, InnerProps>;
+  activePage: InnerProps;
+  setActivePage: (activePage: InnerProps) => void;
+  data: InnerProps;
+};
 
-export type { OuterProps }
+
+export type { StateProps, InnerProps }

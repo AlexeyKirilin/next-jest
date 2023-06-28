@@ -1,5 +1,7 @@
+@import "~styles/colors";
+
 .footer {
-    background-color: #555555;
+    background-color: $gray1;
 }
 
 .footerWrapper {
@@ -11,7 +13,7 @@
     text-transform: uppercase;
     width: 500px;
     align-items: center;
-    border-right: 1px solid #494949;
+    border-right: 1px solid $gray2;
     text-align: center;
     padding: 23px 0;
 }
@@ -32,7 +34,7 @@
     padding: 10px;
     display: flex;
     gap: 100px;
-    border-bottom: 1px solid #494949;
+    border-bottom: 1px solid $gray2;
 }
 
 .footerName {
@@ -48,8 +50,8 @@
     cursor: pointer;
     padding: 10px 30px;
     align-items: center;
-    background-color: #e72121;
-    color: #fff;
+    background-color: $red2;
+    color: $white;
     font-size: 30px;
     border-radius: 25px;
     border: none;

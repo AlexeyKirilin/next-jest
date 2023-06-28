@@ -17,24 +17,24 @@ import { State } from 'store/types';
 
 const initialState: ContentState = {
     bread: {
-        data: [],
-        error: null,
-        isLoading: false
+      data: [],
+      error: null,
+      isLoading: false
     },
     cakes: {
-        data: [],
-        error: null,
-        isLoading: false
+      data: [],
+      error: null,
+      isLoading: false
     },
     pies: {
-        data: [],
-        error: null,
-        isLoading: false
+      data: [],
+      error: null,
+      isLoading: false
     },
     buns: {
-        data: [],
-        error: null,
-        isLoading: false
+      data: [],
+      error: null,
+      isLoading: false
     },
     total: {
       data: [],

@@ -4,7 +4,6 @@ import { getAllBread } from "api/routes/getAllBread";
 import { getAllCakes } from 'api/routes/getAllCakes';
 import { getAllPies } from 'api/routes/getAllPies';
 import { getAllBuns } from 'api/routes/getAllBuns';
-// import { BreadData } from './types';
 
 const fetchAllBread = createAsyncThunk<BreadResponseData>(
     'fetchAllBread',

@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-import { OuterProps } from './types';
+import { StateProps } from './types';
 import {
   fetchAllBread,
   fetchAllCakes,
@@ -11,13 +11,10 @@ import {
 } from 'store/reducers/actions';
 
 import View from './view';
-// import { title } from 'process';
 
-const Controller: React.FC<OuterProps> = ({
-  data,
-  setActivePage,
-  activePage,
-}) => {
+type Props = StateProps;
+
+const Controller: React.FC<Props> = ({ data, setActivePage, activePage }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,7 +23,7 @@ const Controller: React.FC<OuterProps> = ({
     // dispatch(fetchAllPies());
     // dispatch(fetchAllBuns());
     // dispatch(getTotal());
-  });
+  }, []);
 
   return (
     <View data={data} activePage={activePage} setActivePage={setActivePage} />

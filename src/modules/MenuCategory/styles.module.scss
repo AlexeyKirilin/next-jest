@@ -1,6 +1,8 @@
+@import "~styles/colors";
+
 .menuCategory {
     width: 300px;
-    background-color: #555555;
+    background-color: $gray1;
     height: 100%;
 
 }
@@ -9,5 +11,10 @@
     text-align: center;
     padding: 40px 0;
     cursor: pointer;
-    border-bottom: 1px solid #494949;
+    border-bottom: 1px solid $gray2;
+}
+
+.active {
+    color: $red1;
+    border: 1px solid $red1;
 }

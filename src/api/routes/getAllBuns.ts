@@ -4,7 +4,7 @@ import { BunsResponseData } from 'api/models/buns';
 
 const getAllBuns = () => {
   sendRequest<BunsResponseData>({
-    url: `/buns`,
+    url: `buns`,
     method: ApiMethods.GET
   })
 }

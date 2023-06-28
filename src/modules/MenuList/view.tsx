@@ -12,10 +12,14 @@ const View: React.FC<OuterProps> = ({ data }) => {
       <h3 className={styles.menuListTitle}>Menu</h3>
       <div className={styles.menuListGrid}>
         <div className={styles.menuListItem}>
-          <Image className={styles.image} src={pictures} alt="item-img" />
-          <h4 className={styles.menuListName}>title</h4>
-          <p className={styles.menuListPrice}>price</p>
-          <div className={styles.menuListQuantity}>total</div>
+          <Image className={styles.image} src={picture} alt="item-img" />
+          <h4 className={styles.menuListName}>{title}</h4>
+          <p className={styles.menuListPrice}>{price}</p>
+          {total.length > 0 ? (
+            <div className={styles.menuListQuantity}>{total}</div>
+          ) : (
+            <div className={styles.menuListQuantity}>Товар закончился</div>
+          )}
           <div className={styles.menuListWrapperPlus}>
             <span className={styles.menuListPlus}>+</span>
           </div>

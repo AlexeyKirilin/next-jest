@@ -1,13 +1,14 @@
+@import "~styles/colors";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color:  #5E5E5E;
-  color: #fff;
+  background-color:  $gray1;
+  color: $white;
   font-weight: bold;
   font-size: 32px;
 }

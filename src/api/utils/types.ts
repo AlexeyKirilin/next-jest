@@ -3,4 +3,9 @@ type RequestData = {
     method: string;
 }
 
-export type { RequestData }
+type ResponseData = {
+    url: string,
+    method: string;
+}
+
+export type { RequestData, ResponseData }
