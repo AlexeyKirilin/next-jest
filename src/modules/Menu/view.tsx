@@ -2,28 +2,28 @@ import React from 'react';
 
 import MenuCategory from 'modules/MenuCategory';
 import MenuList from 'modules/MenuList';
-import { OuterProps } from './types';
+import { ViewProps } from './types';
 
 import styles from './styles.module.scss';
 
-function View<DictionaryItems>({
+const View: React.FC<ViewProps> = ({
   setActivePage,
   data,
   activePage,
-  dictionaryData,
-}: OuterProps<DictionaryItems>) {
-  const dictionaryDataItem = dictionaryData[activePage];
+  // dictionaryData,
+}) => {
+  // const dictionaryDataItem = dictionaryData[activePage];
 
   return (
     <div className={styles.menu}>
       <MenuCategory
-        dictionaryData={dictionaryData}
+        // dictionaryData={dictionaryData}
         setActivePage={setActivePage}
         activePage={activePage}
       />
-      <MenuList data={dictionaryDataItem} />
+      <MenuList data={data} />
     </div>
   );
-}
+};
 
 export default View;

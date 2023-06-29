@@ -2,11 +2,10 @@ import sendRequest from 'api/utils/utils';
 import { ApiMethods } from 'store/constants/types';
 import { CakesData } from 'api/models/cakes';
 
-const getAllCakes = () => {
+const getAllCakes = () => 
   sendRequest<CakesData>({
-    url: `/cakes`,
+    url: '/cakes',
     method: ApiMethods.GET
   })
-}
 
 export { getAllCakes };

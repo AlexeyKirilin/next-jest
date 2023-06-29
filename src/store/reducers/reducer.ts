@@ -6,41 +6,26 @@ import {
   fetchAllCakes,
   fetchAllPies,
   fetchAllBuns,
-  getTotal
+  fetchTotal
 } from './actions';
 
 import { handlePendingStore, handleFulfilledStore, handleRejectedStore } from 'helpers/store';
 
-import { ContentStateBlocks, BreadData, CakesData, PiesData, BunsData, ContentState } from './types';
+import { ContentStateBlocks, BreadData, CakesData, PiesData, BunsData, ContentState, ErrorAction } from './types';
 
 import { State } from 'store/types';
+import { TotalData } from 'api/models/total';
 
 const getInitialStateBlock = () => ({
   data: [], error: null, isLoading: false
 })
 
 const initialState: ContentState = {
-    bread: getInitialStateBlock(),
-    cakes: {
-      data: [],
-      error: null,
-      isLoading: false
-    },
-    pies: {
-      data: [],
-      error: null,
-      isLoading: false
-    },
-    buns: {
-      data: [],
-      error: null,
-      isLoading: false
-    },
-    total: {
-      data: [],
-      error: null,
-      isLoading: false
-    }
+  bread: getInitialStateBlock(),
+  cakes: getInitialStateBlock(),
+  pies: getInitialStateBlock(),
+  buns: getInitialStateBlock(),
+  total: getInitialStateBlock(),
 };
 
 const handlers = {
@@ -55,7 +40,7 @@ const handlers = {
     },
     [fetchAllBread.rejected.type]: (state: ContentState, { error }: ErrorAction) => {
       const errorData = { name: error.name, message: error.message };
-      handleRejectedStore({ state, errorData, name: ContentStateBlocks.BREAD });
+        handleRejectedStore({ state, errorData, name: ContentStateBlocks.BREAD });
     },
 
     [fetchAllCakes.pending.type]: (state: ContentState) => {
@@ -99,12 +84,16 @@ const handlers = {
       const errorData = { name: error.name, message: error.message };
       handleRejectedStore({ state, errorData, name: ContentStateBlocks.BUNS });
     },
-    [getTotal.type]: (
-      state: ContentState,
-      { payload }: { payload: number },
-    ) => {
-        state.total = payload;
-      },
+    [fetchTotal.pending.type]:(state: ContentState) => {
+      handlePendingStore({ state, name: ContentStateBlocks.TOTAL});
+    },
+    [fetchTotal.fulfilled.type]:(state:ContentState, {payload}: PayloadAction<TotalData[]>) => {
+      handleFulfilledStore({ state, payload, name: ContentStateBlocks.TOTAL})
+    },
+    [fetchTotal.rejected.type]:(state:ContentState, {error}: ErrorAction) => {
+      const errorData = { name: error.name, message: error.message };
+      handleRejectedStore({ state, errorData, name: ContentStateBlocks.TOTAL})
+    },
     [HYDRATE]: (state: ContentState, action: PayloadAction<State>) => ({
       ...state,
       ...action.payload.contentStore,

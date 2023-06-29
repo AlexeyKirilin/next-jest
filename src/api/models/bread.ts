@@ -12,4 +12,4 @@ type BreadResponseData = {
     data: BreadData
 }
 
-export type {BreadResponseData}
+export type { BreadResponseData, BreadData }

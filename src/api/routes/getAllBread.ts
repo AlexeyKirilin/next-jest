@@ -1,10 +1,10 @@
 import sendRequest from 'api/utils/utils';
 import { ApiMethods } from 'store/constants/types';
-import { BreadResponseData } from 'api/models/bread';
+import { BreadData } from 'api/models/bread';
 
 const getAllBread = () => 
-  sendRequest<BreadResponseData>({
-    url: `bread`,
+  sendRequest<BreadData>({
+    url: '/bread',
     method: ApiMethods.GET,
   })
 

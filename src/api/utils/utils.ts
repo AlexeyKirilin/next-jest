@@ -1,6 +1,6 @@
 import axios from 'axios';
 // добавить линтер на проверку не используемых импортов
-import { RequestData, ResponseData } from './types';
+import { RequestData } from './types';
 
 const api = () =>
   axios.create({

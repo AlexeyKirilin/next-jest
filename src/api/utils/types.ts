@@ -3,10 +3,4 @@ type RequestData = {
     method: string;
 }
 
-// не используется
-type ResponseData = {
-    url: string,
-    method: string;
-}
-
-export type { RequestData, ResponseData }
+export type { RequestData }

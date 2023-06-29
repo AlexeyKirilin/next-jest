@@ -1,21 +1,21 @@
-type HandlePending<S> = {
+export type HandlePending<S> = {
   state: S;
   name: ContentStateBlocks;
 };
   
-type HandleFulfilled<S, P> = {
+export type HandleFulfilled<S, P> = {
   state: S;
   payload: P;
- name: ContentStateBlocks;
+  name: ContentStateBlocks;
 };
 
-type HandleRejected<S, E> = {
+export type HandleRejected<S, E> = {
   state: S;
   errorData: E;
   name: ContentStateBlocks;
 };
 
-type BreadData = {
+export type BreadData = {
   id: number,
   title: string,
   imageUrl: string,
@@ -25,7 +25,7 @@ type BreadData = {
   descr: string;
 }
 
-type CakesData = {
+export type CakesData = {
   id: number,
   imageUrl: string,
   title: string,
@@ -35,7 +35,7 @@ type CakesData = {
   descr: string
 }
 
-type PiesData = {
+export type PiesData = {
   id: number,
   imageUrl: string,
   title: string,
@@ -45,7 +45,7 @@ type PiesData = {
   descr: string
 }
 
-type BunsData = {
+export type BunsData = {
   id: number,
   imageUrl: string,
   title: string,
@@ -55,13 +55,13 @@ type BunsData = {
   descr: string
 }
 
-type TotalData = {
+export type TotalData = {
   title: string,
   price: number,
   id: number
 }
 
-enum ContentStateBlocks {
+export enum ContentStateBlocks {
   BREAD = 'bread',
   CAKES = 'cakes',
   BUNS = 'buns',
@@ -69,65 +69,40 @@ enum ContentStateBlocks {
   TOTAL = 'total'
 }
 
-enum CurrentPage  {
+export enum CurrentPage  {
   BREAD = 'bread',
   CAKES = 'cakes',
   BUNS = 'buns',
   PIES = 'pies'
 }
 
-type ContentState = {
-  [ContentStateBlocks.BREAD]: BreadState;
-  [ContentStateBlocks.CAKES]: CakesState;
-  [ContentStateBlocks.PIES]: PiesState;
-  [ContentStateBlocks.BUNS]: Bunstate;
-  [ContentStateBlocks.TOTAL]: TotalState;
+export type ErrorAction = {
+  error: {
+    name: string;
+    message: string;
+  };
 };
-  
 
-type StoreError = {
+export type StoreError = {
   name: string;
   message: string;
 };
 
-type StoreBlock<R> = {
+export type StoreBlock<R> = {
   data: R[],
   isLoading: boolean;
   error: StoreError | null;
 }
-type BreadState = StoreBlock<BreadData>
+export type BreadState = StoreBlock<BreadData>
+export type CakesState = StoreBlock<CakesData>
+export type PiesState = StoreBlock<PiesData>
+export type BunsState = StoreBlock<BunsData>
+export type TotalState = StoreBlock<TotalData>
 
-type CakesState = {
-    data: CakesData[];
-} & StoreState;
-
-type PiesState = {
-    data: PiesData[];
-} & StoreState;
-
-type BunsState = {
-    data: BunsData[];
-} & StoreState;
-
-type TotalState = {
-  data: TotalData[];
-} & StoreState;
-
-export type {
-  HandlePending, 
-  HandleFulfilled, 
-  HandleRejected, 
-  BreadData,
-  CakesData, 
-  PiesData, 
-  BunsData, 
-  BreadState,
-  CakesState,
-  PiesState,
-  BunsState, 
-  ContentState,
-  TotalState,
-  TotalData
-}
-
-export { ContentStateBlocks, CurrentPage }
+export type ContentState = {
+  [ContentStateBlocks.BREAD]: BreadState;
+  [ContentStateBlocks.CAKES]: CakesState;
+  [ContentStateBlocks.PIES]: PiesState;
+  [ContentStateBlocks.BUNS]: BunsState;
+  [ContentStateBlocks.TOTAL]: TotalState;
+};

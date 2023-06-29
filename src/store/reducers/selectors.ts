@@ -7,43 +7,25 @@ const selectAppStore = createSelector(
   ({ contentStore }) => contentStore,
 );
 
-const selectBreadData = createSelector(selectAppStore, ({bread}) => bread.data);
-const selectBreadError = createSelector(selectAppStore, ({bread}) => bread.error);
-const selectBreadIsLoading = createSelector(selectAppStore, ({bread}) => bread.isLoading);
+export const selectBreadData = createSelector(selectAppStore, ({bread}) => bread.data);
+export const selectBreadError = createSelector(selectAppStore, ({bread}) => bread.error);
+export const selectBreadIsLoading = createSelector(selectAppStore, ({bread}) => bread.isLoading);
 
 
-const selectCakesData = createSelector(selectAppStore, ({cakes}) => cakes.data);
-const selectCakesError = createSelector(selectAppStore, ({cakes}) => cakes.error);
-const selectCakesIsLoading = createSelector(selectAppStore, ({cakes}) => cakes.isLoading);
+export const selectCakesData = createSelector(selectAppStore, ({cakes}) => cakes.data);
+export const selectCakesError = createSelector(selectAppStore, ({cakes}) => cakes.error);
+export const selectCakesIsLoading = createSelector(selectAppStore, ({cakes}) => cakes.isLoading);
 
-const selectPiesData = createSelector(selectAppStore, ({pies}) => pies.data);
-const selectPiesError = createSelector(selectAppStore, ({pies}) => pies.error);
-const selectPiesIsLoading = createSelector(selectAppStore, ({pies}) => pies.isLoading);
+export const selectPiesData = createSelector(selectAppStore, ({pies}) => pies.data);
+export const selectPiesError = createSelector(selectAppStore, ({pies}) => pies.error);
+export const selectPiesIsLoading = createSelector(selectAppStore, ({pies}) => pies.isLoading);
 
-const selectBunsData = createSelector(selectAppStore, ({buns}) => buns.data);
-const selectBunsError = createSelector(selectAppStore, ({buns}) => buns.error);
-const selectBunsIsLoading = createSelector(selectAppStore, ({buns}) => buns.isLoading);
+export const selectBunsData = createSelector(selectAppStore, ({buns}) => buns.data);
+export const selectBunsError = createSelector(selectAppStore, ({buns}) => buns.error);
+export const selectBunsIsLoading = createSelector(selectAppStore, ({buns}) => buns.isLoading);
 
-const selectTotalData = createSelector(selectAppStore, ({total}) => total.data);
-const selectTotalError = createSelector(selectAppStore, ({total}) => total.error);
-const selectTotalIsLoading = createSelector(selectAppStore, ({total}) => total.isLoading);
+export const selectTotalData = createSelector(selectAppStore, ({total}) => total.data);
+export const selectTotalError = createSelector(selectAppStore, ({total}) => total.error);
+export const selectTotalIsLoading = createSelector(selectAppStore, ({total}) => total.isLoading);
 
-
-export {
-  selectBreadData,
-  selectBreadError,
-  selectBreadIsLoading,
-  selectCakesData,
-  selectCakesError,
-  selectCakesIsLoading,
-  selectPiesData,
-  selectPiesError,
-  selectPiesIsLoading,
-  selectBunsData,
-  selectBunsError,
-  selectBunsIsLoading,
-  selectTotalData,
-  selectTotalError,
-  selectTotalIsLoading,
-}
 

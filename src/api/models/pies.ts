@@ -12,4 +12,4 @@ type PiesResponseData = {
     data: PiesData
 }
 
-export type { PiesResponseData }
+export type { PiesResponseData, PiesData }
