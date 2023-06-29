@@ -1,17 +1,19 @@
 import { InnerProps } from "modules/Menu/types";
 
 enum CategoryName {
-    bread = 'BREAD',
-    cakes = 'CAKES',
-    pies = 'PIES',
-    buns = 'BUNS'
+  bread = 'BREAD',
+  cakes = 'CAKES',
+  pies = 'PIES',
+  buns = 'BUNS'
 }
 
 type OuterProps<DictionaryItem> = {
-    dictionaryData: Record<DictionaryItem, InnerProps>;
-    activePage: DictionaryItem;
-    setActivePage: (activePage: DictionaryItem) => void;
-  };
+  dictionaryData: Record<DictionaryItem, InnerProps>;
+  activePage: DictionaryItem;
+  setActivePage: (activePage: DictionaryItem) => void;
+};
+
+type 
 
 export { CategoryName }
 
